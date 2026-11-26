@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Practise Excel, SQL and regression using the supplied Data Analytics in Accounting cases.">
+  <title>Exam Studio Practice</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="questions.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header>
+    <a class="brand" href="#home">Exam Studio Practice</a>
+    <p>Data Analytics in Accounting</p>
+    <nav aria-label="Main navigation"><a href="#bank">Question bank</a><a href="#exams">Practice exams</a><a href="#materials">Course materials</a></nav>
+  </header>
+  <main id="main">
+    <section id="home" aria-labelledby="home-heading">
+      <h1 id="home-heading">Exam practice</h1>
+      <p>Work through questions from the supplied course cases. Check your answer, review the method, and try a short example with different values.</p>
+      <div class="actions"><a class="button" href="#bank">Choose a question</a><a class="button secondary" href="#exams">Try an exam</a></div>
+      <div id="coverage" class="coverage"></div>
+      <details><summary>How to use this site</summary>
+        <ol><li>Choose a question and download its data if needed.</li><li>Work in Excel or DB Browser for SQLite. Enter the result here.</li><li>Check the answer and review the solution method.</li><li>Use “Try another example” to practise the same skill.</li></ol>
+        <p>Written answers use a model answer and a self-review checklist. Practice exams show feedback after submission. Work is kept while this page stays open. Refreshing clears your attempts.</p>
+        <p>These are student-created practice questions and exam sets based on the supplied materials. The teacher determines the actual exam content.</p>
+      </details>
+    </section>
+    <section id="bank" hidden aria-labelledby="bank-heading">
+      <h1 id="bank-heading">Question bank</h1><p>Choose a topic or search for a skill.</p>
+      <div class="filters">
+        <div><label for="section-filter">Course case</label><select id="section-filter"><option value="all">All cases</option></select></div>
+        <div><label for="case-filter">Topic</label><select id="case-filter"><option value="all">All topics</option></select></div>
+        <div><label for="search">Find a question</label><input id="search" type="search" placeholder="Search question or skill"></div>
+      </div>
+      <p id="question-count" role="status"></p><div id="question-list" class="question-list"></div>
+    </section>
+    <section id="question" hidden aria-label="Practice question"></section>
+    <section id="exams" hidden aria-labelledby="exams-heading">
+      <h1 id="exams-heading">Practice exams</h1>
+      <p>A mixed exam includes one question from each of the seven course cases. A case exam includes up to four questions.</p>
+      <label for="exam-scope">Choose an exam</label><select id="exam-scope"><option value="all">Mixed exam — seven cases</option></select>
+      <label class="checkbox"><input id="include-optional" type="checkbox"> Include optional exercises</label>
+      <button id="new-exam" type="button">Start a new exam</button>
+      <p>Feedback appears after submission. Written responses are self-reviewed against a checklist.</p>
+      <div id="exam-questions"></div><button id="submit-exam" type="button" hidden>Submit exam</button>
+      <div id="exam-result" role="status" tabindex="-1"></div>
+    </section>
+    <section id="materials" hidden aria-labelledby="materials-heading">
+      <h1 id="materials-heading">Course materials</h1>
+      <p>Original supplied files, grouped by course case. Alternate CSV and Excel versions are included. Optional P-card exercises are labelled in the question bank.</p>
+      <p>The restaurant questions use daily sales aggregated from the supplied workbook. Each fitted model states its preparation and units.</p>
+      <div id="resource-list"></div>
+    </section>
+    <noscript>Enable JavaScript to load the questions and answer checks.</noscript>
+  </main>
+</body>
+</html>

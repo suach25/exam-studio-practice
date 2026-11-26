@@ -1,0 +1,4 @@
+This assignment is based on the CS50 course. Please find additional resources (lecture, tutorial video) on the page below:
+
+https://cs50.harvard.edu/x/2021/weeks/7/
+
